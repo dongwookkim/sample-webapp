@@ -1,7 +1,7 @@
 <template>
   <div class="text-left">
     <v-chip class="ma-2" color="pink" text-color="white">
-      <v-icon left>mdi-label </v-icon>
+      <v-icon left> mdi-label </v-icon>
       {{ text }}
     </v-chip>
   </div>
@@ -10,7 +10,7 @@
 <script>
 export default {
   name: 'TitleText',
-  props: ['text'],
+  props: ['text']
 }
 </script>
 

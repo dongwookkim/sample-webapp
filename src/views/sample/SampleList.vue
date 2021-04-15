@@ -8,7 +8,7 @@
       </thead>
       <tbody>
         <tr v-for="item in samples" :key="item.id">
-          <td><title-text :text="item.title"></title-text></td>
+          <td><title-text :text="item.title" /></td>
         </tr>
       </tbody>
     </template>
@@ -23,16 +23,16 @@ export default {
   computed: {
     samples() {
       return this.$store.state.sample.samples
-    },
-  },
-  methods: {
-    fetchSampleData() {
-      this.$store.dispatch('sample/fetchData')
-    },
+    }
   },
   created() {
     this.fetchSampleData()
   },
+  methods: {
+    fetchSampleData() {
+      this.$store.dispatch('sample/fetchData')
+    }
+  }
 }
 </script>
 

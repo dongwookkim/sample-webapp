@@ -9,5 +9,5 @@ console.log(modules)
 export default new Vuex.Store({
   modules,
   strict: debug,
-  plugins: debug ? [createLogger()] : [],
+  plugins: debug ? [createLogger()] : []
 })

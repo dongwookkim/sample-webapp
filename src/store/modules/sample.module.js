@@ -1,7 +1,7 @@
 import ApiService from '@/common/api.service'
 
 const state = {
-  samples: [],
+  samples: []
 }
 
 // Getters
@@ -10,19 +10,19 @@ const getters = {}
 // Actions
 const actions = {
   async fetchData({ commit }) {
-    let response = await ApiService.get(
-      'https://jsonplaceholder.typicode.com/posts',
+    const response = await ApiService.get(
+      'https://jsonplaceholder.typicode.com/posts'
     )
 
     commit('FETCH_DATA_SUCCESS', response.data)
-  },
+  }
 }
 
 // Mutations
 const mutations = {
   FETCH_DATA_SUCCESS(state, data) {
     state.samples = data
-  },
+  }
   // other mutations
 }
 
@@ -31,5 +31,5 @@ export default {
   state,
   actions,
   mutations,
-  getters,
+  getters
 }

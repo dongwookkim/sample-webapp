@@ -8,7 +8,7 @@ import VueAxios from 'vue-axios'
 const ApiService = {
   init() {
     Vue.use(VueAxios, axios)
-    Vue.axios.defaults.headers['Pragma'] = 'no-cache'
+    Vue.axios.defaults.headers.Pragma = 'no-cache'
     Vue.axios.interceptors.response.use(
       response => response,
       error => {
@@ -19,7 +19,7 @@ const ApiService = {
         }
 
         return Promise.reject(error.response)
-      },
+      }
     )
   },
 
@@ -78,7 +78,7 @@ const ApiService = {
     return Vue.axios.delete(resource).catch(error => {
       throw new Error(`[API] ApiService ${error}`)
     })
-  },
+  }
 }
 
 export default ApiService
